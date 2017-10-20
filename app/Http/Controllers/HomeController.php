@@ -3,11 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\home;
 
 class HomeController extends Controller
 {
     public function index()
     {
-       return view('home');
+       $body = home::aboute()->all();
+      // dd($body);
+        return view('home' , compact('body'));
     }
+
+
+
 }

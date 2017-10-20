@@ -30,15 +30,18 @@
                     <h3 class="masthead-brand">عبد العزيز الدبيب</h3>
                     <nav class="nav nav-masthead">
                         <a class="nav-link" href="#">اتصل بنا</a>
-                        <a class="nav-link" href="#">التسجيل</a>
+                        <a class="nav-link" href="registration/">التسجيل</a>
                         <a class="nav-link active" href="#">الرئيسية</a>
                     </nav>
                 </div>
             </div>
 
             <div class="inner cover">
-                <h1 class="cover-heading">Cover your page.</h1>
-                <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+                <h1 class="cover-heading">
+                    @foreach ($body as $text)
+                    {{ $text->title }}</h1>
+                <p class="lead">{{ $text->body }}
+                    @endforeach
                 <p class="lead">
                     <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
                 </p>
