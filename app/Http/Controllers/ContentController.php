@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\content;
 
 class ContentController extends Controller
 {
@@ -21,14 +22,15 @@ class ContentController extends Controller
     public function store()
     {
 
-        dd(request(['title','body']));
+        $this->validate(request(),[
 
-        // Create a new post using the request data
+            'title' => 'required',
+            'body' => 'required',
+        ]);
 
-        // Save it to the DB
+        content::create(request()->all());
 
-        // Redirect to the home page
-
+        return redirect('/registration/create');
 
     }
 }

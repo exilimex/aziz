@@ -11,16 +11,21 @@
             {{ csrf_field() }}
         <div class="form-group">
             <label for="title">العنوان</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" name="title">
+            <input type="text" class="form-control" id="exampleInputEmail1" name="title" >
         </div>
 
         <div class="form-group">
             <label for="body">المحتوى</label>
-         <textarea id="body" name="body" class="form-control" ></textarea>
+         <textarea id="body" name="body" class="form-control"></textarea>
         </div>
 
-        <button type="submit" class="btn btn-primary">حفظ</button>
-    </form>
+        <div class="form-group">
+             <button type="submit" class="btn btn-primary">حفظ</button>
+        </div>
+
+            @include('layouts.error')
+
+        </form>
     </div>
 
 @endsection
