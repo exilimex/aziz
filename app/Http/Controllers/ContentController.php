@@ -10,14 +10,31 @@ class ContentController extends Controller
 
     public function registration()
     {
-        return view('registration.index');
+        $content = content::all();
+        return view('registration.index' , compact('content'));
     }
+
+
+
+
+    public function show($id)
+    {
+
+        $Post = content::find($id);
+
+        return view('registration.show', compact('Post'));
+    }
+
 
 
     public function create()
     {
         return view('registration.create');
     }
+
+
+
+
 
     public function store()
     {

@@ -299,6 +299,7 @@ class ComposerStaticInit28b907026722a22acf8e188e04a14801
     );
 
     public static $classMap = array (
+        'App\\Comment' => __DIR__ . '/../..' . '/app/Comment.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\ContentCategory' => __DIR__ . '/../..' . '/app/ContentCategory.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
@@ -324,7 +325,6 @@ class ComposerStaticInit28b907026722a22acf8e188e04a14801
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'App\\content' => __DIR__ . '/../..' . '/app/content.php',
         'App\\home' => __DIR__ . '/../..' . '/app/home.php',
-        'App\\registration' => __DIR__ . '/../..' . '/app/registration.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
         'Carbon\\Exceptions\\InvalidDateException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
