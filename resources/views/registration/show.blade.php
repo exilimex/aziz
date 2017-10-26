@@ -37,7 +37,7 @@
 
                 <div class="card-body">
 
-                    <form method="post" action="/registration/{{ $comment->id }}/comments">
+                    <form method="post" action="/registration/{{ $Post->id }}/comments">
                         {{ csrf_field() }}
 
                         <div class="form-group ">

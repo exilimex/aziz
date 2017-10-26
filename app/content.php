@@ -3,7 +3,8 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Comment;
+
+
 class content extends Model
 {
     protected $guarded = ['id'];
@@ -18,6 +19,7 @@ class content extends Model
 
     public function addComment($body)
     {
+      // dd(Comment::class);
         $this->comments()->create(compact('body'));
     }
 
