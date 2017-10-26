@@ -8,17 +8,50 @@
 
         {{ $Post->body }}
 
-</div>
 
-    <div class="frame-comment">
+    <hr>
 
-    @foreach($Post->comments as $comment)
-        <article>
 
-            {{ $comment->body }}
+<div class="comments">
 
-        </article>
-    @endforeach
+        <ui class="list-group">
+
+            @foreach($Post->comments as $comment)
+
+          <li class="list-group-item">
+
+              {{ $comment->body }}
+
+          </li>
+            @endforeach
+
+        </ui>
+
+
+
+    <hr>
+
+    {{-- add a comment --}}
+
+            <div class="card">
+
+                <div class="card-body">
+
+                    <form method="post" action="/registration/{{ $comment->id }}/comments">
+                        {{ csrf_field() }}
+
+                        <div class="form-group ">
+                            <textarea name="body" placeholder="اضف تعليق "  class="form-control"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">ارسال</button>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
     </div>
-
+</div>
 @endsection

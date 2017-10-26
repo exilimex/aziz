@@ -16,3 +16,4 @@ Route::get('/registration/','ContentController@registration');
 Route::get('/registration/create','ContentController@create');
 Route::post('/registration/' , 'ContentController@store');
 Route::get('/registration/{ID}','ContentController@show');
+Route::post('/registration/{ID}/comments' , 'CommentsController@store');
