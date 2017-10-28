@@ -12,6 +12,7 @@ class Comment extends Model
 
     public function content()
     {
+
         return $this->belongsTo(content::class);
     }
 }

@@ -49,6 +49,7 @@
                         </div>
                     </form>
 
+                    @include('layouts.error')
                 </div>
 
             </div>

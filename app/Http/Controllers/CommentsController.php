@@ -13,7 +13,10 @@ class CommentsController extends Controller
     public function store(content $content)
     {
 
-      $content->addComment(request('body'));
+
+        $this->validate(request(),['body'=>'required']);
+
+        $content->addComment(request('body'));
 
 
       return back();
