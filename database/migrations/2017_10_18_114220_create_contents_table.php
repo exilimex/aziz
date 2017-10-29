@@ -18,6 +18,7 @@ class CreateContentsTable extends Migration
             $table->string('title');
             $table->text('body');
             $table->integer('content_category');
+            $table->integer('user_id');
             $table->timestamps();
         });
     }

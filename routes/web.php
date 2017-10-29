@@ -17,3 +17,11 @@ Route::get('/registration/create','ContentController@create');
 Route::post('/registration/' , 'ContentController@store');
 Route::get('/registration/{id}','ContentController@show');
 Route::post('/registration/{content}/comments' , 'CommentsController@store');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
